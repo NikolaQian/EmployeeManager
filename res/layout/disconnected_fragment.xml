@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+    <LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E63c444f"
+    android:orientation="vertical"
+    android:gravity="center">
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:gravity="center_horizontal">
+             <ImageView android:layout_width="314dip"
+            android:layout_height="314dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/disconn"/>
+             <com.huami.employeemanager.ui.CustomFontTextView
+            android:layout_marginTop="36dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textColor="#99FFFFFF"
+            android:textStyle="bold"
+            android:text="@string/disconnected" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

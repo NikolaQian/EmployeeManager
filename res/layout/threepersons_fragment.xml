@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/bg" >
+    
+	<LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="120dip"
+        android:layout_marginTop="207dip">
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/photo_selector"
+            android:padding="5dip">
+             <ImageView android:id="@+id/photo_threepersons1"
+            android:layout_width="180dip"
+            android:layout_height="263dip"
+            android:scaleType="fitXY"/>
+        </LinearLayout>
+        <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/name_threepersons1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dip"
+            android:textSize="43sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dip">
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/department_threepersons1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#99FFFFFF"/>
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/position_threepersons1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#99FFFFFF"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+	<LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="107dip"
+        android:layout_marginTop="207dip">
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/photo_selector"
+            android:padding="5dip">
+             <ImageView android:id="@+id/photo_threepersons2"
+            android:layout_width="180dip"
+            android:layout_height="263dip"
+            android:scaleType="fitXY"/>
+        </LinearLayout>
+        <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/name_threepersons2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dip"
+            android:textSize="43sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dip">
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/department_threepersons2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#99FFFFFF"/>
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/position_threepersons2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#99FFFFFF"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+	<LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="107dip"
+        android:layout_marginTop="207dip">
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/photo_selector"
+            android:padding="5dip">
+             <ImageView android:id="@+id/photo_threepersons3"
+            android:layout_width="180dip"
+            android:layout_height="263dip"
+            android:scaleType="fitXY"/>
+        </LinearLayout>
+        <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/name_threepersons3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dip"
+            android:textSize="43sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dip">
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/department_threepersons3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#99FFFFFF"/>
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/position_threepersons3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#99FFFFFF"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

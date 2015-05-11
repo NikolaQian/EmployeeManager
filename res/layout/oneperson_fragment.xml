@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/bg" >
+    
+     <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="160dip"
+        android:layout_marginTop="165dip"
+        android:background="@drawable/photo_selector"
+        android:padding="5dip">
+        <ImageView android:id="@+id/photo_oneperson"
+        android:layout_width="300dip"
+        android:layout_height="439dip"
+        android:scaleType="fitXY"/>
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dip"
+        android:layout_marginTop="292dip"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/name_oneperson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="85.3sp"/>
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dip">
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/department_oneperson"
+                android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="#99FFFFFF"
+	            android:textStyle="bold"
+	            android:textSize="43sp"/>
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/position_oneperson"
+                android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="#99FFFFFF"
+	            android:textStyle="bold"
+	            android:textSize="43sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

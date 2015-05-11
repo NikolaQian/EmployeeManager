@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:background="@drawable/bg">
+    
+     <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="72dip"
+        android:layout_marginTop="207dip">
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/photo_selector"
+            android:padding="5dip">
+             <ImageView android:id="@+id/photo_more1"
+            android:layout_width="150dip"
+            android:layout_height="219dip"
+            android:scaleType="fitXY"/>
+        </LinearLayout>
+        <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/name_more1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dip"
+            android:textSize="43sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dip">
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/department_more1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#99FFFFFF"/>
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/position_more1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#99FFFFFF"/>
+        </LinearLayout>
+	</LinearLayout>
+	        
+        <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="67dip"
+        android:layout_marginTop="207dip">
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/photo_selector"
+            android:padding="5dip">
+             <ImageView android:id="@+id/photo_more2"
+            android:layout_width="150dip"
+            android:layout_height="219dip"
+            android:scaleType="fitXY"/>
+        </LinearLayout>
+        <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/name_more2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dip"
+            android:textSize="43sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dip">
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/department_more2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#99FFFFFF"/>
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/position_more2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#99FFFFFF"/>
+        </LinearLayout>
+	</LinearLayout>  
+	      
+        <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="67dip"
+        android:layout_marginTop="207dip">
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/photo_selector"
+            android:padding="5dip">
+             <ImageView android:id="@+id/photo_more3"
+            android:layout_width="150dip"
+            android:layout_height="219dip"
+            android:scaleType="fitXY"/>
+        </LinearLayout>
+        <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/name_more3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dip"
+            android:textSize="43sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dip">
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/department_more3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#99FFFFFF"/>
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/position_more3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#99FFFFFF"/>
+        </LinearLayout>
+	</LinearLayout>
+	
+        <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="67dip"
+        android:layout_marginTop="207dip">
+        <RelativeLayout android:layout_width="200dip"
+            android:layout_height="229dip">
+            <ImageView android:layout_width="40dip"
+                android:layout_height="229dip"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/more"
+                android:scaleType="fitXY"
+                android:layout_marginRight="7dip"/>
+            <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/photo_selector"
+            android:padding="5dip"
+            android:layout_alignParentLeft="true">
+             <ImageView android:id="@+id/photo_more4"
+            android:layout_width="150dip"
+            android:layout_height="219dip"
+            android:scaleType="fitXY"/>
+        </LinearLayout>
+        </RelativeLayout>
+        <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/name_more4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dip"
+            android:textSize="43sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dip">
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/department_more4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#99FFFFFF"/>
+            <com.huami.employeemanager.ui.CustomFontTextView android:id="@+id/position_more4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#99FFFFFF"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
