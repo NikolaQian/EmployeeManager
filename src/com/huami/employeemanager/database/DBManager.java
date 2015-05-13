@@ -14,7 +14,9 @@ import android.graphics.drawable.BitmapDrawable;
 
 public class DBManager {
 	//数据库在sd卡中的路径
-	public static final String DB_PATH = android.os.Environment.getExternalStorageDirectory().getAbsolutePath() + "/data/";
+	public static final String DB_PATH = android.os.Environment.getExternalStorageDirectory().getAbsolutePath() + "/EmployeeManager/database";
+	//照片存放路径
+	public static final String PHOTO_PATH = android.os.Environment.getExternalStorageDirectory().getAbsolutePath() + "/EmployeeManager/photo";
 	//数据库名称
 	public static final String DB_NAME = "employees_manager.db";
 	
@@ -23,7 +25,7 @@ public class DBManager {
 	
 	public DBManager(Context context){
 		this.context = context;
-		this.db = SQLiteDatabase.openOrCreateDatabase(DB_PATH + DB_NAME, null);
+		this.db = SQLiteDatabase.openOrCreateDatabase(DB_PATH + "/" + DB_NAME, null);
 		db.execSQL("CREATE TABLE IF NOT EXISTS employees (_id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCGHAR, miID VARCHAR, " +
 								"department VARCHAR, position VARCHAR, phoneNum VARCHAR, age INTEGER, photo BLOB DEFAULT NULL)");
 		
@@ -33,10 +35,8 @@ public class DBManager {
 	
 	//增加单个元素
 	public void addOne(Employee e){
-		ByteArrayOutputStream os = new ByteArrayOutputStream();
-		e.getPhoto().compress(Bitmap.CompressFormat.PNG, 100, os);
 		db.execSQL("INSERT INTO employees VALUES(NULL,?,?,?,?,?,?,?)", new Object[]{e.getName(), e.getMiID(), e.getDepartment(), e.getPosition(),
-																								e.getPhoneNum(), e.getAge(), os.toByteArray()});	
+																								e.getPhoneNum(), e.getAge(), e.getPhoto()});	
 	}
 	
 	//增加多个元素

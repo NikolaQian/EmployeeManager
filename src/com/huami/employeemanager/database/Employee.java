@@ -15,13 +15,13 @@ public class Employee implements Serializable{
 	private String position;
 	private String phoneNum;
 	private int age;
-	private Bitmap photo;
+	private String photo;
 	
 	public Employee(){		
 		
 	}
 	
-	public Employee(String name, String miID,String department, String phoneNum, int age, Bitmap photo){
+	public Employee(String name, String miID,String department, String phoneNum, int age, String photo){
 		this.name = name;
 		this.miID = miID;
 		this.department = department;
@@ -30,11 +30,11 @@ public class Employee implements Serializable{
 		this.photo = photo;
 	}
 
-	public Bitmap getPhoto() {
+	public String getPhoto() {
 		return photo;
 	}
 
-	public void setPhoto(Bitmap photo) {
+	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
 
