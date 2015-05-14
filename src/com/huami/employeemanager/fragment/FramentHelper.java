@@ -1,5 +1,6 @@
 package com.huami.employeemanager.fragment;
 
+import android.graphics.BitmapFactory;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -10,7 +11,7 @@ import com.huami.employeemanager.image.ImageModify;
 public class FramentHelper {
 	public static void displayFragment(Employee employee, ImageView photoImageView, TextView nameTextView,
 										TextView departmentTextView, TextView positionTextView){
-		photoImageView.setImageBitmap(ImageModify.toRoundCorner(employee.getPhoto(), 10));
+		photoImageView.setImageBitmap(ImageModify.toRoundCorner(BitmapFactory.decodeFile(employee.getPhoto()), 10));
 		
 		if(employee.getName().length() == 2){
 			StringBuilder builder = new StringBuilder(employee.getName());

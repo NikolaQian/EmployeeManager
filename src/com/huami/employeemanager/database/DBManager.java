@@ -1,16 +1,15 @@
 package com.huami.employeemanager.database;
 
-import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import com.huami.employeemanager.activity.R;
+
+import com.huami.employeemanager.common.UIHelper;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 
 public class DBManager {
 	//数据库在sd卡中的路径
@@ -24,10 +23,21 @@ public class DBManager {
 	private Context context;
 	
 	public DBManager(Context context){
+		File databaseDir = new File(DB_PATH);
+		File photoDir = new File(PHOTO_PATH);
+		
+		if(!databaseDir.exists()){
+			databaseDir.mkdirs();
+		}
+		
+		if(!photoDir.exists()){
+			photoDir.mkdirs();
+		}
+		
 		this.context = context;
 		this.db = SQLiteDatabase.openOrCreateDatabase(DB_PATH + "/" + DB_NAME, null);
 		db.execSQL("CREATE TABLE IF NOT EXISTS employees (_id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCGHAR, miID VARCHAR, " +
-								"department VARCHAR, position VARCHAR, phoneNum VARCHAR, age INTEGER, photo BLOB DEFAULT NULL)");
+								"department VARCHAR, position VARCHAR, phoneNum VARCHAR, age INTEGER, photo VARCHAR DEFAULT('unknown.png'))");
 		
 	}
 	
@@ -71,9 +81,7 @@ public class DBManager {
 		cv.put("position", e.getPosition());
 		cv.put("phoneNum", e.getPhoneNum());
 		cv.put("age", e.getAge());
-		ByteArrayOutputStream os = new ByteArrayOutputStream();
-		e.getPhoto().compress(Bitmap.CompressFormat.PNG, 100, os);
-		cv.put("photo", os.toByteArray());
+		cv.put("photo", e.getPhoto());
 		
 		db.update("employees", cv, "miID=?", new String[]{oldEmployee.getMiID()});
 	}
@@ -82,6 +90,7 @@ public class DBManager {
 	public ArrayList<Employee> query(String miID){
 		ArrayList<Employee> lst = new ArrayList<Employee>();
 		Cursor c = db.rawQuery("SELECT * FROM employees WHERE miID=?", new String[]{String.valueOf(miID)});
+		
 		while(c.moveToNext()){
 			Employee person = new Employee();
     		person.set_id(c.getInt(c.getColumnIndex("_id")));
@@ -91,12 +100,7 @@ public class DBManager {
     		person.setPosition(c.getString(c.getColumnIndex("position")));
     		person.setPhoneNum(c.getString(c.getColumnIndex("phoneNum")));
     		person.setAge(c.getInt(c.getColumnIndex("age")));
-    		byte[] photo = c.getBlob(c.getColumnIndex("photo"));
-    		if((new String(photo)).equals("NULL\0")){
-    			person.setPhoto(((BitmapDrawable)context.getResources().getDrawable(R.drawable.unknown)).getBitmap());
-    		}else {
-        		person.setPhoto(BitmapFactory.decodeByteArray(photo, 0, photo.length));
-    		}    			
+    		person.setPhoto(PHOTO_PATH + "/" + c.getString(c.getColumnIndex("photo")));
     		lst.add(person);
 		}
 		
@@ -116,12 +120,7 @@ public class DBManager {
     		person.setPosition(c.getString(c.getColumnIndex("position")));
     		person.setPhoneNum(c.getString(c.getColumnIndex("phoneNum")));
     		person.setAge(c.getInt(c.getColumnIndex("age")));
-    		byte[] photo = c.getBlob(c.getColumnIndex("photo"));
-    		if((new String(photo)).equals("NULL\0")){
-    			person.setPhoto(((BitmapDrawable)context.getResources().getDrawable(R.drawable.unknown)).getBitmap());
-    		}else {
-        		person.setPhoto(BitmapFactory.decodeByteArray(photo, 0, photo.length));
-    		} 
+    		person.setPhoto(PHOTO_PATH + "/" + c.getString(c.getColumnIndex("photo"))); 
     		lst.add(person);
 		}
 		

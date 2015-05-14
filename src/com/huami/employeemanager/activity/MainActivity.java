@@ -201,7 +201,7 @@ public class MainActivity extends BaseActivity implements OnGestureListener{
 				if(dbmgr.query(miID).size() == 0){
 					Employee employee = new Employee();
 					employee.setName("未知");
-					employee.setPhoto(((BitmapDrawable)getResources().getDrawable(R.drawable.unknown)).getBitmap());
+					employee.setPhoto(DBManager.PHOTO_PATH + "/unknown.png");
 //					UIHelper.ToastMessage(this, getResources().getString(R.string.bracelet_not_exist) + miID);
 					listItem.add(0, employee);
 					continue;
@@ -253,7 +253,7 @@ public class MainActivity extends BaseActivity implements OnGestureListener{
 		if (!application.isTablet()) {
 			initPortpaitView();
 		}
-
+		
 		listItem = new ArrayList<Employee>();
 		
 		socketThread = new SocketReceiveThread(this, handler, application.getIpAdress());
@@ -319,7 +319,8 @@ public class MainActivity extends BaseActivity implements OnGestureListener{
 	private void downLoad(String keyWord){
 		Bundle bundle = new Bundle();
 		String[] keyArrays = keyWord.split(":");
-		long fileLength = Long.parseLong(keyArrays[2]);
+		String str = keyArrays[2].replaceAll("\\s*", "");  //可以替换大部分空白字符， 不限于空格   "\s"可以匹配空格、制表符、换页符等空白字符的其中任意一个 
+		long fileLength = Long.parseLong(str);
 		
 		bundle.putLong("fileLength", fileLength);
 		startActivity(DownLoadDialog.class, bundle);

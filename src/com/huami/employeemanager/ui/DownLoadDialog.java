@@ -100,7 +100,7 @@ public class DownLoadDialog extends BaseActivity{
 			
 			Intent intent = getIntent();
 			runnable = new DownLoadThread(handler, intent.getExtras().getLong("fileLength"), 
-											DBManager.DB_PATH, DBManager.DB_NAME, application);
+											DBManager.DB_PATH + "/", DBManager.DB_NAME, application);
 			
 			runnable.start();
 			
